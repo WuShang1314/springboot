@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component//注入类的方式
 @ConfigurationProperties(prefix = "pres")
 public class Pres {
-    @Value("${student.id}")
+   @Value("${student.id}")
     private int id;
     @Value("${student.name}")
     private String  name;

@@ -1,5 +1,7 @@
 package cn.lzy;
 
+import cn.lzy.configbean.Pres;
+import cn.lzy.configbean.Student;
 import cn.lzy.configbean.User;
 import cn.lzy.controller.ChapterController;
 import cn.lzy.mybatiscatalog.Comment;
@@ -35,8 +37,10 @@ public class ChapterTestAppication {
       int id;
     @Autowired
     User user;
-//    @Autowired
-//    Pres pres;
+    @Autowired
+    Pres pres;
+    @Autowired
+    Student student;
 //   @Autowired
 //   CustomProperties customProperties;
     @Autowired
@@ -50,12 +54,18 @@ public class ChapterTestAppication {
    @Autowired
     RedisRepository RedisRepository;//9.05
 
+   /* @Test
+    public void studentTest(){
+        System.out.println(student);
+    }*/
 
 
     @Test
     public  void contextLoads(){
-        System.out.println("单元测试返回的id数据---"+id);
+        //System.out.println("单元测试返回的id数据---"+id);
         System.out.println("单元测试返回的user数据---"+user);
+        System.out.println("单元测试返回的pres数据---"+pres);
+        System.out.println(student);
 //        MyProperties myProperties=(MyProperties) applicationContext.getBean("MyProperties");
 //        if (myProperties !=null){
 //            System.out.println("MyProperties 类注入不成功");
