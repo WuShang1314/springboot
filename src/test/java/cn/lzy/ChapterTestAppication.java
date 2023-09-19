@@ -1,5 +1,6 @@
 package cn.lzy;
 
+import cn.lzy.configbean.User;
 import cn.lzy.controller.ChapterController;
 import cn.lzy.mybatiscatalog.Comment;
 import cn.lzy.mybatiscatalog.CommentMapper;
@@ -11,6 +12,7 @@ import cn.lzy.profilelconfig.DBConnector;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -28,11 +30,11 @@ public class ChapterTestAppication {
     ChapterController chapterController;
 
 
-//   @Autowired
-//   @Value("${student.id}")
-//  int id;
-//    @Autowired
-//   User user;
+  @Autowired
+  @Value("${student.id}")
+      int id;
+    @Autowired
+    User user;
 //    @Autowired
 //    Pres pres;
 //   @Autowired
@@ -52,6 +54,8 @@ public class ChapterTestAppication {
 
     @Test
     public  void contextLoads(){
+        System.out.println("单元测试返回的id数据---"+id);
+        System.out.println("单元测试返回的user数据---"+user);
 //        MyProperties myProperties=(MyProperties) applicationContext.getBean("MyProperties");
 //        if (myProperties !=null){
 //            System.out.println("MyProperties 类注入不成功");
@@ -105,5 +109,6 @@ public class ChapterTestAppication {
  /*   String TAG="ChapterTestAppication";
     @Autowired
     ChapterController mChapterController;*/
+
 
 }
