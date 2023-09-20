@@ -71,7 +71,7 @@ public class CustomProperties {
 
     @Override
     public String toString() {
-        return "CustoProperyies{" +
+        return "CustomProperties{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +

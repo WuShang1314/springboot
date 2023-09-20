@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 public class MyConfig {
 @Bean(" MyProperties")
     public MyProperties getMyProperties(){
+
     return new MyProperties();
 }
 

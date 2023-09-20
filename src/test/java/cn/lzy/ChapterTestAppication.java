@@ -4,6 +4,7 @@ import cn.lzy.configbean.Pres;
 import cn.lzy.configbean.Student;
 import cn.lzy.configbean.User;
 import cn.lzy.controller.ChapterController;
+import cn.lzy.customconfig.MyProperties;
 import cn.lzy.mybatiscatalog.Comment;
 import cn.lzy.mybatiscatalog.CommentMapper;
 import cn.lzy.mybatiscatalog.redis.Address;
@@ -32,9 +33,9 @@ public class ChapterTestAppication {
     ChapterController chapterController;
 
 
-  @Autowired
+/*  @Autowired
   @Value("${student.id}")
-      int id;
+      int id;*/
     @Autowired
     User user;
     @Autowired
@@ -61,14 +62,16 @@ public class ChapterTestAppication {
 
 
     @Test
-    public  void contextLoads(){
+    public  void contextLoads() {
         //System.out.println("单元测试返回的id数据---"+id);
-        System.out.println("单元测试返回的user数据---"+user);
+        /*System.out.println("单元测试返回的user数据---"+user);
         System.out.println("单元测试返回的pres数据---"+pres);
-        System.out.println(student);
-//        MyProperties myProperties=(MyProperties) applicationContext.getBean("MyProperties");
-//        if (myProperties !=null){
-//            System.out.println("MyProperties 类注入不成功");
+        System.out.println(student);*/
+        MyProperties myProperties = (MyProperties) applicationContext.getBean("MyProperties");
+        if (myProperties != null) {
+            myProperties.getResult();
+           // System.out.println("MyProperties 类注入不成功");
+            System.out.println(myProperties);
 //
 //        } else {
 //            myProperties.getResult();
@@ -87,7 +90,7 @@ public class ChapterTestAppication {
 */
         /*List<Person> listPerson=RedisRepository.findByLastname("夜");
         System.out.println(listPerson);//9.05*/
-    }
+        }
 //9.05
    /* @Test//单元测试目录
     public void saveRedisPerson(){
@@ -120,5 +123,5 @@ public class ChapterTestAppication {
     @Autowired
     ChapterController mChapterController;*/
 
-
+    }
 }
