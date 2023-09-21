@@ -12,18 +12,22 @@ import javax.validation.constraints.Email;
 @Validated
 public class User {
 
-
-    @URL
+    @Email
+    String email;
+  //  @URL
     String url;
 
     public void setUrl(String url) {
         this.url = url;
     }
 
+    public void setEmail(String email){this.email=email;}
+
     @Override
     public String toString() {
         return "User{" +
-                "url='" + url + '\'' +
+                "email='" + email + '\'' +
+                ", url='" + url + '\'' +
                 '}';
     }
 }

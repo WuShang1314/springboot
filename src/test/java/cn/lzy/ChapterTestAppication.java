@@ -67,11 +67,11 @@ public class ChapterTestAppication {
         /*System.out.println("单元测试返回的user数据---"+user);
         System.out.println("单元测试返回的pres数据---"+pres);
         System.out.println(student);*/
-        MyProperties myProperties = (MyProperties) applicationContext.getBean("MyProperties");
+       /* MyProperties myProperties = (MyProperties) applicationContext.getBean("MyProperties");
         if (myProperties != null) {
             myProperties.getResult();
            // System.out.println("MyProperties 类注入不成功");
-            System.out.println(myProperties);
+            System.out.println(myProperties);}*/
 //
 //        } else {
 //            myProperties.getResult();
@@ -123,5 +123,5 @@ public class ChapterTestAppication {
     @Autowired
     ChapterController mChapterController;*/
 
-    }
+
 }
