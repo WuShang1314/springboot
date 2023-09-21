@@ -1,7 +1,7 @@
 package cn.lzy.mybatiscatalog.jpa;
 
 import javax.persistence.*;
-@Entity(name = "comment")
+@Entity(name = "t_comment")
 
 public class Dis {
     @Id
@@ -10,17 +10,7 @@ public class Dis {
     private String content;
     private String author;
     @Column(name = "a_id")
-    private Integer aid;
-
-    @Override
-    public String toString() {
-        return "Dis{" +
-                "id=" + id +
-                ", content='" + content + '\'' +
-                ", author='" + author + '\'' +
-                ", aid=" + aid +
-                '}';
-    }
+    private Integer aId;
 
     public Integer getId() {
         return id;
@@ -46,11 +36,21 @@ public class Dis {
         this.author = author;
     }
 
-    public Integer getAid() {
-        return aid;
+    public Integer getaId() {
+        return aId;
     }
 
-    public void setAid(Integer aid) {
-        this.aid = aid;
+    public void setaId(Integer aId) {
+        this.aId = aId;
+    }
+
+    @Override
+    public String toString() {
+        return "Dis{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                ", author='" + author + '\'' +
+                ", aId=" + aId +
+                '}';
     }
 }

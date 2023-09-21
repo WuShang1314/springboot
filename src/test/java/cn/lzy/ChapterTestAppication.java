@@ -7,6 +7,8 @@ import cn.lzy.controller.ChapterController;
 import cn.lzy.customconfig.MyProperties;
 import cn.lzy.mybatiscatalog.Comment;
 import cn.lzy.mybatiscatalog.CommentMapper;
+import cn.lzy.mybatiscatalog.jpa.Dis;
+import cn.lzy.mybatiscatalog.jpa.DisRepository;
 import cn.lzy.mybatiscatalog.redis.Address;
 import cn.lzy.mybatiscatalog.redis.Family;
 import cn.lzy.mybatiscatalog.redis.Person;
@@ -54,6 +56,14 @@ public class ChapterTestAppication {
 
    @Autowired
     RedisRepository RedisRepository;//9.05
+
+    @Autowired
+    DisRepository disRepository;
+    @Test
+    public void repository(){
+        List<Dis> list=disRepository.findByAuthorNotNull();
+        System.out.println(list);
+    }
 
    /* @Test
     public void studentTest(){
