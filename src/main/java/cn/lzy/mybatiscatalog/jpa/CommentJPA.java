@@ -1,19 +1,20 @@
-
 package cn.lzy.mybatiscatalog.jpa;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity(name = "t_comment")
-
-public class Dis implements Serializable {
+/**
+ * @ClassName ${黄金福}
+ * @date 2023/9/26 11:51
+ * @Version 1.0
+ */
+@Entity(name = "t_article")
+public class CommentJPA implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String content;
-    private String author;
-    @Column(name = "a_id")
-    private Integer aId;
+    private String title;
 
     public Integer getId() {
         return id;
@@ -31,29 +32,20 @@ public class Dis implements Serializable {
         this.content = content;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getTitle() {
+        return title;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public Integer getaId() {
-        return aId;
-    }
-
-    public void setaId(Integer aId) {
-        this.aId = aId;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     @Override
     public String toString() {
-        return "Dis{" +
+        return "CommentJPA{" +
                 "id=" + id +
                 ", content='" + content + '\'' +
-                ", author='" + author + '\'' +
-                ", aId=" + aId +
+                ", title='" + title + '\'' +
                 '}';
     }
 }

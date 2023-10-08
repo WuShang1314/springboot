@@ -5,10 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ImportResource;
 
 //启动类
 @SpringBootApplication
+@EnableCaching
 @ImportResource("classpath:xmlproperties.xml")
 /*public class ChapterApplication {
 

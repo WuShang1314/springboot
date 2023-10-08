@@ -1,3 +1,4 @@
+
 package cn.lzy.mybatiscatalog.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -24,6 +25,9 @@ public interface DisRepository extends JpaRepository<Dis,Integer> {
     @Query("DELETE t_comment c WHERE  c.id = ?1")
     public int deleteDiscuss(Integer id);
 
-
-
+    @Transactional
+    @Modifying
+    @Query("UPDATE t_comment c SET c.author=?1 where c.id=?2")
+    public int updateComment(String author,Integer id);
 }
+
