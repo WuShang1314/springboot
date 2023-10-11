@@ -28,10 +28,6 @@ import java.util.UUID;
  */
 @Controller
 public class FileController {
-    /*@GetMapping("/toDownload")
-    public String toDownload(){
-        return "download";
-    }*/
 
     @GetMapping("/toUpload")
     public String toUpload(){
