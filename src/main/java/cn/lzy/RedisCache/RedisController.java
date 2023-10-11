@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2023/10/1 20:27
  * @Version 1.0
  */
+//删除redis的存放
 @RestController
 public class RedisController {
     @Autowired

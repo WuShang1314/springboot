@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 @Entity(name = "t_comment")
 
-public class Dis implements Serializable {
+public class Dis /*implements Serializable*/ {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

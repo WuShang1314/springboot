@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @Version 1.0
  */
 @Entity(name = "t_article")
-public class CommentJPA implements Serializable {
+public class CommentJPA /*implements Serializable*/ {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

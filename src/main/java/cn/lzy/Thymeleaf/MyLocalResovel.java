@@ -14,11 +14,11 @@ import java.util.Locale;
 public class MyLocalResovel implements LocaleResolver {
     @Override
     public Locale resolveLocale(HttpServletRequest httpServletRequest){
-        String 1=httpServletRequest.getParameter("1");
+        String l=httpServletRequest.getParameter("1");
         String header=httpServletRequest.getHeader("Accept-Language");
         Locale locale=null;
-        if (!StringUtils.isEmpty(1)){
-            String[] split=1.split("_");
+        if (!StringUtils.isEmpty(l)){
+            String[] split=l.split("_");
             locale=new Locale(split[0],split[1]);
         }else {
             String[] splits=header.split(",");
@@ -35,5 +35,6 @@ public class MyLocalResovel implements LocaleResolver {
     public LocaleResolver localeResolver(){
         return new MyLocalResovel();
     }
-}*/
+}
 
+*/

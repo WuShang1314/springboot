@@ -20,7 +20,7 @@ import java.util.UUID;
 /**
  * @BelongsProject: untitled1
  * @BelongsPackage: cn.lzy.web.fel
- * @ClassName FileController
+ * @ClassName FileControllers
  * @Author: huangjinfu
  * @CreateTime: 2023-09-18  16:34
  * @Description: TODO
@@ -83,9 +83,9 @@ public class FileController {
 
     private  String getFilename(HttpServletRequest request, String filename)
             throws Exception{
-        String[] IEBrowserKeywORDS={"MSIE","Trident","Edge"};
+        String[] IEBrowserKeyWords={"MSIE","Trident","Edge"};
         String userAgent=request.getHeader("User-Agent");
-        for (String KeyWord : IEBrowserKeywORDS){
+        for (String KeyWord : IEBrowserKeyWords){
             if (userAgent.contains(KeyWord)){
                 return URLEncoder.encode(filename,"UTF-8").replace("+","");
             }
@@ -93,6 +93,7 @@ public class FileController {
         return new String(filename.getBytes("Utf-8"),"ISO-8859-1");
     }
 }
+
 
 
 

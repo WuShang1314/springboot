@@ -1,3 +1,4 @@
+
 package cn.lzy.mybatiscatalog;
 
 public class Comment {
@@ -48,3 +49,4 @@ public class Comment {
                 '}';
     }
 }
+

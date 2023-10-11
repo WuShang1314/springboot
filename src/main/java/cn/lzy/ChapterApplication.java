@@ -9,6 +9,7 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ImportResource;
 
 //启动类
+@ServletComponentScan
 @SpringBootApplication
 @EnableCaching
 @ImportResource("classpath:xmlproperties.xml")
