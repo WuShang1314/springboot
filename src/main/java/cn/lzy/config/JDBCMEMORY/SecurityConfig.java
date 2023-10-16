@@ -18,7 +18,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();//安全密钥
- auth.inMemoryAuthentication().passwordEncoder(encoder)
+/* auth.inMemoryAuthentication().passwordEncoder(encoder)
                 .withUser("wu").password(encoder.encode("1314"))
                 .roles("common")
                 .and()
@@ -27,9 +27,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 //内存身份认证
     }
-}
+}*/
 
-/*
         String userSQL = "select username,password,valid from t_customer " + "where username = ?";
         String authoritySQL = "select c.username,a.authority from t_customer c, " +
                 "t_authority 	a,t_customer_authority ca where " +
@@ -40,4 +39,3 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authoritiesByUsernameQuery(authoritySQL);//JDBC认证
     }
 }
-*/
