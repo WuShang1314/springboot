@@ -7,27 +7,21 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 //启动类
-@ServletComponentScan
-@SpringBootApplication
+/*@ServletComponentScan*/
+@SpringBootApplication()
 @EnableCaching
-@ImportResource("classpath:xmlproperties.xml")
-/*public class ChapterApplication {
+//@ImportResource("classpath:xmlproperties.xml")
 
-    public static void main(String[] args) {
-//        SpringApplication.run(ChapterApplication.class,args);
-        SpringApplication.run(ChapterApplication.class,args);
-
-    }
-
-}*/
 public class ChapterApplication extends SpringBootServletInitializer{
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder){
         return builder.sources(ChapterApplication.class);
     }
     public static void main(String[] args){
+
         SpringApplication.run(ChapterApplication.class,args);
     }
 }
