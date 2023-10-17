@@ -28,7 +28,8 @@ public class RedisSecurityConfig extends WebSecurityConfigurerAdapter {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         auth.userDetailsService(userDetailsService).passwordEncoder(encoder);
     }
-/*    @Override
+
+    @Override
     protected void configure(HttpSecurity http) throws Exception {
         //需要对static文件夹下静态资源进行统一放行
         http.authorizeRequests()
@@ -49,7 +50,9 @@ public class RedisSecurityConfig extends WebSecurityConfigurerAdapter {
         http.logout()
                 .logoutUrl("/mylogout")
                 .logoutSuccessUrl("/");
-
+    }
+}
+/*
         //定制Remember-me记住我的功能
         http.rememberMe()
                 .rememberMeParameter("rememberme")
@@ -63,5 +66,6 @@ public class RedisSecurityConfig extends WebSecurityConfigurerAdapter {
         JdbcTokenRepositoryImpl jr = new JdbcTokenRepositoryImpl();
         jr.setDataSource(dataSource);
         return jr;
-    }*/
+    }
 }
+*/

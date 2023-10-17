@@ -30,11 +30,11 @@ public class FileControllers {
         System.out.println(TAG + "-----" + value);
         return value;
     }
-
-   /* @GetMapping("/userLogin")
+//自定义登录跳转
+    @GetMapping("/userLogin")
     public String toLoginPage() {
         return "login/login";
-    }*/
+    }
 
 /*    @GetMapping("/getuserBySession")
     @ResponseBody
