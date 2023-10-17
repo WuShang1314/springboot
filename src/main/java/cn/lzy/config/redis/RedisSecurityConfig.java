@@ -20,8 +20,8 @@ import javax.sql.DataSource;
 public class RedisSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
-   /* @Autowired
-    private DataSource dataSource;//数据源*/
+    @Autowired
+    private DataSource dataSource;//数据源
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -50,13 +50,13 @@ public class RedisSecurityConfig extends WebSecurityConfigurerAdapter {
         http.logout()
                 .logoutUrl("/mylogout")
                 .logoutSuccessUrl("/");
-    }
-}
-/*
+
         //定制Remember-me记住我的功能
         http.rememberMe()
                 .rememberMeParameter("rememberme")
-                .tokenValiditySeconds(200);
+                .tokenValiditySeconds(20)
+                //持久化管理
+                .tokenRepository(tokenRepository());
 
  http.csrf().disable();
 
@@ -68,4 +68,3 @@ public class RedisSecurityConfig extends WebSecurityConfigurerAdapter {
         return jr;
     }
 }
-*/
