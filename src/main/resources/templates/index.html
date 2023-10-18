@@ -8,10 +8,10 @@
 </head>
 <body>
     <h1 align="center">欢迎进入单身汪电影首页</h1>
-    <form th:action="@{/mylogout}" method="post">
+  <!--  <form th:action="@{/mylogout}" method="post">
         <input th:type="submit" th:value="注销" />
-    </form>
-   <!-- <div sec:authorize="isAnonymous()">
+    </form>-->
+    <div sec:authorize="isAnonymous()">
         <h2 align="center">游客您好，如果想查看电影<a th:href="@{/userLogin}">请登录</a></h2></div>
     <div sec:authorize="isAuthenticated()">
         <h2 align="center"><span sec:authentication="name" style="color: #007bff"></span>
@@ -20,17 +20,19 @@
         <form th:action="@{/mylogout}" method="post">
             <input th:type="submit" th:value="注销" />
         </form>
-    </div>-->
-    <!--<div sec:authorize="hasRole('common')">-->
+
+        <hr>
+    </div>
+    <div sec:authorize="hasRole('common')">
         <h3>普通电影</h3>
         <ul><li><a th:href="@{/detail/common/1}">前任1</a></li>
             <li><a th:href="@{/detail/common/2}">前任2</a></li></ul>
-   <!-- </div>-->
-    <!--<div sec:authorize="hasAuthority('ROLE_vip')">-->
+    </div>
+    <div sec:authorize="hasAuthority('ROLE_vip')">
         <h3>VIP专享</h3>
         <ul><li><a th:href="@{/detail/vip/1}">前任3</a></li>
             <li><a th:href="@{/detail/vip/2}">前任4</a></li></ul>
-    <!--</div>-->
+    </div>
 
 </body>
 </html>
