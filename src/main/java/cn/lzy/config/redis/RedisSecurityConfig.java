@@ -58,7 +58,8 @@ public class RedisSecurityConfig extends WebSecurityConfigurerAdapter {
                 //持久化管理
                 .tokenRepository(tokenRepository());
 
- http.csrf().disable();
+        //可以关闭默spring security默认开启的csrf防护功能
+       /* http.csrf().disable();*/
 
     }
     @Bean
