@@ -9,6 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.sql.DataSource;
 
+/*
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -18,6 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();//安全密钥
+*/
 /* auth.inMemoryAuthentication().passwordEncoder(encoder)
                 .withUser("wu").password(encoder.encode("1314"))
                 .roles("common")
@@ -27,7 +29,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 //内存身份认证
     }
-}*/
+}*//*
+
 
         String userSQL = "select username,password,valid from t_customer " + "where username = ?";
         String authoritySQL = "select c.username,a.authority from t_customer c, " +
@@ -39,3 +42,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authoritiesByUsernameQuery(authoritySQL);//JDBC认证
     }
 }
+*/
