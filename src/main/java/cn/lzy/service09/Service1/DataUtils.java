@@ -1,4 +1,4 @@
-package cn.lzy.service09;
+package cn.lzy.service09.Service1;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,7 +10,7 @@ import java.util.Date;
  */
 public class DataUtils {
     public final static String data1="yyyy-MM-dd HH:mm:ss";
-    public final static String data2="yyyy-MM-dd";
+    public final static String data2="yyyy-MM-dd ";
     public static String getData(String dataType){
         Date day=new Date();
         SimpleDateFormat lnb=new SimpleDateFormat(dataType);

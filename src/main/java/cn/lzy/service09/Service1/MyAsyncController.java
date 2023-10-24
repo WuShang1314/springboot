@@ -1,12 +1,10 @@
-package cn.lzy.service09;
+package cn.lzy.service09.Service1;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.thymeleaf.util.DateUtils;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.concurrent.Future;
 
 /**
@@ -37,7 +35,8 @@ public class MyAsyncController {
         Long startTime = System.currentTimeMillis();
         Future<Integer> futureA = myService.processA();
         Future<Integer> futureB = myService.processB();
-        int total = futureA.get() + futureB.get();
+        Future<Integer> futureC = myService.processC();
+        int total = futureA.get() + futureB.get() + futureC.get();
         System.out.println("异步任务数据统计汇总结果： " + total + " " + "执行时间: " + DataUtils.getData(DataUtils.data1));
         Long endTime = System.currentTimeMillis();
         System.out.println("主流程耗时： "+(endTime-startTime));

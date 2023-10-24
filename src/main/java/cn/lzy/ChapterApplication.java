@@ -8,6 +8,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 //启动类
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @SpringBootApplication()
 @EnableCaching
 @EnableAsync
+@EnableScheduling//开启基于注释的异步和同步任务支持
 //@ImportResource("classpath:xmlproperties.xml")
 
 public class ChapterApplication extends SpringBootServletInitializer{
