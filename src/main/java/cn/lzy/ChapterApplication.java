@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @SpringBootApplication()
 @EnableCaching
 @EnableAsync
-@EnableScheduling//开启基于注释的异步和同步任务支持
+
+@EnableScheduling//开启基于注释的异步和同步任务支持(第九章定时任务)
+
 //@ImportResource("classpath:xmlproperties.xml")
 
 public class ChapterApplication extends SpringBootServletInitializer{
