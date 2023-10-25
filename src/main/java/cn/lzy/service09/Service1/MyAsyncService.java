@@ -55,7 +55,7 @@ public class MyAsyncService {
         int total3=process1()+process2();
         System.out.println("1-1000值+1000-2000的值为：" + total3);
         Long endTime=System.currentTimeMillis();
-        System.out.println("1000-2000的计算时长为："+ (endTime-startTimeB));
+        System.out.println("1-1000的值 + 1000-2000的值计算时长为："+ (endTime-startTimeB));
         System.out.println( "1-1000的值 + 1000-2000的值 计算结束时间为: " + DataUtils.getData(DataUtils.data1));
         return new AsyncResult<>(total3);
     }

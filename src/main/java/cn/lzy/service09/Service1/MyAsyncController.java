@@ -15,7 +15,7 @@ import java.util.concurrent.Future;
 @RestController
 public class MyAsyncController {
     //http://localhost:8091/sendSMS
-    //http://localhost:8091/statistics
+    //http://localhost:8091/statistics  测试
 
     @Autowired
     private MyAsyncService myAsyncService;
